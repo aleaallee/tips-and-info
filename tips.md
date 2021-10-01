@@ -1,8 +1,21 @@
 # Tips e información útil de tecnologías, lenguajes y librerías
 
+## Docker
+
+Ejecutar un contenedor de docker:
+
+```shell
+docker container run --publish {puertoLocal:puertoContenedor} --detach --name {nombre} --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+```
+
+--publish permite abrir los puertos del contenedor a la red local mediante el equipo que está ejecutando el contenedor
+
+
+## MySQL
+
 Usar mysql-client para conectarse a un servidor mysql que esté dentro de un contenedor de Docker.
 
-```console
+```shell
 foo@bar:~$ mysql -h { IP } -P { puerto } -u{usuario (todo junto tras -u)} -p
 ```
 
